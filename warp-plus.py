@@ -2,6 +2,7 @@ import asyncio
 import os
 import urllib.request
 import httpx
+import random
 
 from config import Vars, log
 from datetime import datetime
@@ -158,7 +159,7 @@ while True:
     print(f"\n[•] WARP+ ID: {referrer}")
     print(f"[✓] Added: {g} GB")
     print(f"[#] Total: {g} Good {b} Bad")
-    for i in range(20, 1, -1):
+    for i in range(random.randrange(35,65), 1, -1):
       stdout.write(f"\033[1K\r[!] Cooldown: {i} seconds")
       stdout.flush()
       sleep(1)
@@ -166,7 +167,7 @@ while True:
     b += 1
     print("\n[×] Error:", result)
     print(f"[#] Total: {g} Good {b} Bad")
-    for i in range(30, -1, -1):
+    for i in range(random.randrange(75,90), -1, -1):
       stdout.write(f"\033[1K\r[!] Cooldown: {i} seconds")
       stdout.flush()
       sleep(1)
